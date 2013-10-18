@@ -1,0 +1,162 @@
+#map_canvas {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+}
+
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+      
+body { 
+	height: 100%; 
+	margin: 0; 
+	padding: 0;
+}
+ 
+ #clock{
+ 	position: fixed;
+ 	left:37%;
+ 	top:2%;
+ 	text-align: center;
+ 	font-weight: bold;
+ 	font-family: LUCIDA CONSOLE;
+ 	background: rgba(250,250,250,.8);
+ 	text-align: center;
+	padding: 10px;
+	border-radius: 6px;
+	width: 150px;
+}
+
+ #sources {
+ 	position:fixed;
+ 	float:left;
+ 	left:0.5%;
+ 	bottom:12%;
+	width: 200px;
+ }
+
+ #button {
+ 	position: fixed;
+ 	float: left;
+ 	left:0.5%;
+ 	bottom:2%;
+	width: 200px;
+ }
+
+#categories {
+    position: fixed;
+    bottom: 2%;
+    left: 20%;
+}
+
+#sidePanel {
+	position: fixed;
+	right:.5%;
+	width: 300px;
+	height:50px;
+	opacity: .9;
+}
+
+
+#dropdown {
+	margin:2px;
+	opacity: 1.0;
+	width: 300px;
+	height:50px;
+}
+
+#panelTitle {
+	text-align: center;
+	
+	height:30px;
+	top:0%;
+	padding-top:5px;
+	color:black;
+}
+
+#articleList {
+	list-style-type: none;
+	padding:0px;
+	margin:0;
+}
+
+.ui-collapsible-content {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	//height:800px;
+}
+
+
+.ui-li .ui-btn-text a.ui-link-inherit {
+	color:rgb(13,2,87);
+	margin:0;
+	cursor: pointer;
+	white-space: normal;
+	font-size: 12px;
+}
+
+#filt {
+	margin-left:-15px;
+	width:296px;
+	overflow: hidden;
+}
+
+
+.listTitle {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+#current_stories {
+	width:200px;
+
+}
+
+#infobox-wrapper {
+	 border:2px solid black;
+    display:none;
+}
+
+#infobox {
+    border:2px solid black;
+    margin-top: 8px;
+    background:white; /*333*/
+    color:black; /*FFF*/
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight: bold;
+    padding: .5em 1em;
+ 
+    border-radius: 8px;
+    text-shadow:0 0px #000000; /*0 -1 #000000*/
+
+    box-shadow: 0 0 8px #000;
+    opacity: 1.0;
+}
+
+#infobox a {
+	text-decoration: none;
+	color: blue;
+	font-weight: bold;
+}
+
+.menuLabel {
+	font-size: 4px;
+}
+
+.menuIcon {
+	height: 20px;
+	width: 20px;
+	margin: 4px;
+	position: relative;
+	top: 7px;
+}
+
+#infobox a:hover {
+	text-decoration: underline;
+}

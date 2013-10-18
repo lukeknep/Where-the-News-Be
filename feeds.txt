@@ -1,0 +1,27 @@
+# New York Times
+
+US|New York Times|http://rss.nytimes.com/services/xml/rss/nyt/US.xml
+World|New York Times|http://rss.nytimes.com/services/xml/rss/nyt/World.xml
+Politics|New York Times|http://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+Business|New York Times|http://rss.nytimes.com/services/xml/rss/nyt/Business.xml
+Technology|New York Times|http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml
+Sports|New York Times|http://rss.nytimes.com/services/xml/rss/nyt/Sports.xml
+Health|New York Times|http://rss.nytimes.com/services/xml/rss/nyt/Health.xml
+Science|New York Times|http://rss.nytimes.com/services/xml/rss/nyt/Science.xml
+
+# AP News
+
+US|AP News|http://hosted2.ap.org/atom/APDEFAULT/3d281c11a96b4ad082fe88aa0db04305
+World|AP News|http://hosted2.ap.org/atom/APDEFAULT/cae69a7523db45408eeb2b3a98c0c9c5
+Politics|AP News|http://hosted2.ap.org/atom/APDEFAULT/89ae8247abe8493fae24405546e9a1aa
+Business|AP News|http://hosted2.ap.org/atom/APDEFAULT/f70471f764144b2fab526d39972d37b3
+Technology|AP News|http://hosted2.ap.org/atom/APDEFAULT/495d344a0d10421e9baa8ee77029cfbd
+Sports|AP News|http://hosted2.ap.org/atom/APDEFAULT/347875155d53465d95cec892aeb06419
+Entertainment|AP News|http://hosted2.ap.org/atom/APDEFAULT/4e67281c3f754d0696fbfdee0f3f1469
+Health|AP News|http://hosted2.ap.org/atom/APDEFAULT/bbd825583c8542898e6fa7d440b9febc
+Science|AP News|http://hosted2.ap.org/atom/APDEFAULT/b2f0ca3a594644ee9e50a8ec4ce2d6de
+
+
+
+# Next Feed with Geo...
+

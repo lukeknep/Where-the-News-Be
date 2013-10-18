@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#infobox {
+    border:1px solid rgba(0,0,0,0.5);
+    margin-top: 2px;
+    background: white; /*333*/
+/* 	background:#a0eeff; */
+    color:black; /*FFF*/
+    font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight: 700;
+    padding: 1em 1em;
+ 
+    border-radius: 14px;
+    text-shadow:0 0px #000000; /*0 -1 #000000*/
+
+    box-shadow: 0 0 0px #000;
+    opacity: 0.95;
+}
+
+#infobox a {
+	color:#108eff;
+}
+
+#infobox a:hover {
+	text-decoration:none;
+	color:#24aeff;
+}
+
+.ui-li .ui-btn-text a.ui-link-inherit {
+	color:#000;
+	padding:7px;
+	padding-top:7px;
+	padding-bottom:7px;
+}
+
+#sidePanel {
+	opacity:0.95;
+}
+
+#clock {
+	background:white;
+	opacity:0.95;
+}

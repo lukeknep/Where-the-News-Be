@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>City Search Test</title>
+<script type="text/javascript" src="jquery-1.5.min.js"></script>
+</head>
+
+<body>
+
+<div>
+    <b>Find a city:</b> <br />
+    <input type="text" id="city_in" /> <input type="submit" value="Search" id="city_go" /><br />
+</div>
+
+<div id="searching">
+	<em>searching...</em>
+</div>
+
+<div id="cityinfo" style="padding-top:25px;">
+	<h2>Matches:</h2>
+    
+    <div id="matches">
+    
+    </div>
+    
+    <div id="model" style="display:none;">
+        <table style="padding:10px;border-bottom:1px dotted #ddd;">
+            <tr>
+                <td><b>Country Code</b></td>
+                <td id="">countrycode</td>
+            </tr>
+            <tr>
+                <td><b>Region</b></td>
+                <td id="">region</td>
+            </tr>
+            <tr>
+                <td><b>City Name</b></td>
+                <td id="">cityname</td>
+            </tr>
+            <tr>
+                <td><b>Latitude</b></td>
+                <td id="">latitude</td>
+            </tr>
+            <tr>
+                <td><b>Longitude</b></td>
+                <td id="">longitude</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+	$("#searching").hide();
+	$("#cityinfo").hide();
+	
+	$("#city_go").click(function() {
+		$("#searching").show();
+		
+		console.log($("#city_in").val());
+		$.post("http://lukeknepper.com/newsmapped/cities_search.php", {
+				text:$("#city_in").val()
+			}, function(ans) {
+			console.log(ans);
+			$("#matches").html("");
+			
+			var json = $.parseJSON(ans);
+			
+			console.log(json);
+			
+			for(city_id in json) {
+				var html = $("#model").html();
+				var city = json[city_id];
+				console.log(city['countrycode']);
+				html = html.replace(/countrycode/g, city['countrycode']);
+				html = html.replace(/region/g, city['region']);
+				html = html.replace(/cityname/g, city['cityname']);
+				html = html.replace(/latitude/g, city['latitude']);
+				html = html.replace(/longitude/g, city['longitude']);
+				
+				$("#matches").append(html);	
+			}
+			
+			$("#cityinfo").show();
+			$("#searching").hide();
+		});
+	});
+</script>
+
+</body>
+</html>

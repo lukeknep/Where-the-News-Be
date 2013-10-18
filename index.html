@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    
+    <!-- jQuery/jQueryMobile/jQueryUI -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet"  href="http://jquerymobile.com/test/css/themes/default/jquery.mobile.css" />   
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://jquerymobile.com/test/js/jquery.mobile.js"></script>
+    
+    <!-- Google Maps -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyAGUSewbcA_eqTcyDyTOeNcRjyTmK9RfRY&sensor=false"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
+    <script type="text/javascript" src="js/oms.min.js"></script> 
+    
+    <!-- WhereTheNews.be -->
+    <link rel="stylesheet" type="text/css" href="style.css"/> 
+    <link rel="stylesheet" type="text/css" href="style-luke.css"/> 
+    <script type="text/javascript" src="js/data.js"></script> 
+    <script type="text/javascript" src="js/mapstyle.js"></script>
+    <script type="text/javascript" src="js/magic.js"></script>
+    <script type="text/javascript" src="js/clock.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    
+    <!-- REMOVE? -->
+    <!--<script type="text/javascript" src="http://jquerymobile.com/test/docs/_assets/js/jqm-docs.js"></script>-->
+    <!--<link rel="stylesheet" href="http://jquerymobile.com/test/docs/_assets/css/jqm-docs.css"/>-->
+    
+    
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas"></div>
+    <div id="infobox-wrapper"></div>
+    <div id="clock" align="center"><p>Current time</p></div>
+    <div id="sidePanel">
+      <div data-role="collapsible" data-content-theme="d" data-collapsed="false" id="dropdown">
+        <h2>Filtered list</h2>
+        <ul data-role="listview" data-filter="true" data-filter-theme="c" data-divider-theme="d" data-scroll="true" id="articleList" data-collapsed="false"></ul>
+      </div>
+    </div>
+
+    <div id="sources">
+      <label><input id="AP News" onclick="filter.toggleSource(this.name)" type="checkbox" name="AP News" value="AP News" checked />AP News</label>
+      <label><input id="New York Times" onclick="filter.toggleSource(this.name)" type="checkbox" name="New York Times" value="New York Times" checked />New York Times</label>
+    </div>
+
+
+    <div id="button">
+      <button id="toggle" onclick="toggleHeatmap()">Toggle Heatmap</button>
+    </div>
+
+   
+    <div id="categories">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+	<label class="menuLabel"><input onclick="filter.toggleCategory(this.name)" type="checkbox" name="US" checked /><img src="images/markers/us.png" class="menuIcon" />US</label>
+	<label class="menuLabel"><input onclick="filter.toggleCategory(this.name)" type="checkbox" name="World" checked /><img src="images/markers/world.png" class="menuIcon" />World</label>
+	<label class="menuLabel"><input onclick="filter.toggleCategory(this.name)" type="checkbox" name="Politics" checked /><img src="images/markers/politics.png" class="menuIcon" />Politics</label>
+	<label class="menuLabel"><input onclick="filter.toggleCategory(this.name)" type="checkbox" name="Business" checked /><img src="images/markers/business.png" class="menuIcon" />Business</label>
+	<label class="menuLabel"><input onclick="filter.toggleCategory(this.name)" type="checkbox" name="Technology" checked /><img src="images/markers/technology.png" class="menuIcon" />Technology</label>
+	<label class="menuLabel"><input onclick="filter.toggleCategory(this.name)" type="checkbox" name="Sports" checked /><img src="images/markers/sports.png" class="menuIcon" />Sports</label>
+	<label class="menuLabel"><input onclick="filter.toggleCategory(this.name)" type="checkbox" name="Entertainment" checked /><img src="images/markers/entertainment.png" class="menuIcon" />Entertainment</label>
+	<label class="menuLabel"><input onclick="filter.toggleCategory(this.name)" type="checkbox" name="Health" checked /><img src="images/markers/health.png" class="menuIcon" />Health</label>
+	<label class="menuLabel"><input onclick="filter.toggleCategory(this.name)" type="checkbox" name="Science" checked /><img src="images/markers/science.png" class="menuIcon" />Science</label>
+      </fieldset>
+    </div>
+
+  </body>
+</html>
